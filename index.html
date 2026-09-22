@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Andrea</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ESCENA 1: ENTRADA -->
+    <section id="inicio" class="scene active">
+
+        <div class="particles"></div>
+
+        <div class="intro-content">
+
+            <h1>Flores para Andrea 🌻</h1>
+
+            <p>Tengo algo que mostrarte...</p>
+
+            <button id="btnAbrir">
+                Abrir 🌻
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ESCENA 2: JARDÍN -->
+
+    <section id="jardin" class="scene">
+
+        <h2>Para alguien muy especial...</h2>
+
+        <p>Andrea 💛</p>
+
+        <div class="petals"></div>
+        <div class="fireflies"></div>
+
+        <div class="garden">
+
+        <!-- Girasol del fondo -->
+        <div class="sunflower sunflower-back">
+            <div class="flower">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="flower-center"></div>
+            <div class="stem"></div>
+        </div>
+
+
+        <!-- Girasol principal -->
+        <div class="sunflower sunflower-main">
+            <div class="flower">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="flower-center"></div>
+            <div class="stem"></div>
+        </div>
+
+
+        <!-- Girasol lateral -->
+        <div class="sunflower sunflower-side">
+            <div class="flower">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="flower-center"></div>
+            <div class="stem"></div>
+        </div>
+
+        <button id="btnCarta">
+            Tengo algo que decirte 💌
+        </button>
+
+    </section>
+
+    <!-- ESCENA 3: CARTA -->
+    <section id="carta" class="scene">
+
+        <div class="letter">
+
+            <h2>Para Andrea 💛</h2>
+
+            <div class="letter-decoration">🌻</div>
+
+            <p id="mensajeCarta"></p>
+
+            <button id="btnFinal">
+                Seguir 💛
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ESCENA 4: FINAL -->
+    <section id="final" class="scene">
+
+        <div class="final-petals"></div>
+
+        <h2>Para ti, Andrea 🌻</h2>
+
+        <p>
+            Espero que este pequeño detalle
+            te haya sacado una sonrisa.
+        </p>
+
+        <button id="btnRepetir">
+            Volver a vivir el momento
+        </button>
+
+    </section>
+    
+    <audio id="musica" loop>
+        <source src="assets/audio/live.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
