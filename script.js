@@ -12,6 +12,9 @@ const botonRepetir = document.getElementById("btnRepetir");
 
 const mensajeCarta = document.getElementById("mensajeCarta");
 
+let temporizadorTypewriter;
+let temporizadorBotonFinal;
+
 const textoCarta = `Tal vez no te haya dado flores en físico, pero quise encontrar una forma diferente de darte este pequeño detalle. 🌻
 
 Lo hice con mucho cariño, porque aunque parezca algo sencillo, detrás de estas flores hay un pedacito de mi tiempo y de mis sentimientos.
@@ -41,10 +44,14 @@ botonAbrir.addEventListener("click", () => {
 
 botonCarta.addEventListener("click", () => {
 
+    clearTimeout(temporizadorTypewriter);
+    clearTimeout(temporizadorBotonFinal);
+
     jardin.classList.remove("active");
     carta.classList.add("active");
 
     mensajeCarta.textContent = "";
+    botonFinal.classList.remove("mostrar");
 
     let i = 0;
 
@@ -53,9 +60,9 @@ botonCarta.addEventListener("click", () => {
             mensajeCarta.textContent += textoCarta.charAt(i);
             i++;
 
-            setTimeout(escribir, 45);
+            temporizadorTypewriter = setTimeout(escribir, 45);
         } else {
-            setTimeout(() => {
+            temporizadorBotonFinal = setTimeout(() => {
                 botonFinal.classList.add("mostrar");
 
                 console.log("🔥 BOTÓN MOSTRADO");
@@ -64,7 +71,7 @@ botonCarta.addEventListener("click", () => {
         }
     }
 
-    setTimeout(escribir, 1200);
+    temporizadorTypewriter = setTimeout(escribir, 1200);
 });
 
 

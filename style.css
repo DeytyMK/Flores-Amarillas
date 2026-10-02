@@ -274,7 +274,31 @@ button:hover {
 }
 
 #jardin.active .sunflower {
-    opacity: 1;
+    opacity: 0; 
+}
+
+#jardin.active .sunflower-back {
+    animation: aparecerFlore 1.2s ease forwards;
+    animation-delay: 0.5s;
+}
+
+#jardin.active .sunflower-main {
+    animation: aparecerFlore 1.2s ease forwards;
+    animation-delay: 0.2s;
+}
+
+#jardin.active .sunflower-side {
+    animation: aparecerFlore 1.2s ease forwards;
+    animation-delay: 0.8s;
+}
+
+@keyframes aparecerFlore {
+    florm {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .sunflower.show {
